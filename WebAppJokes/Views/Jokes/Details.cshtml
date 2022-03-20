@@ -1,0 +1,35 @@
+﻿
+@model WebAppJokes.Models.Joke
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Joke</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.JokeQuestion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.JokeQuestion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.JokeAnswer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.JokeAnswer)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
